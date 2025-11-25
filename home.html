@@ -1,0 +1,158 @@
+home.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Controle de Materiais de Informática</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        /* ===== CABEÇALHO ===== */
+        header {
+            background-color: #0046ff;
+            padding: 20px 0;
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #aad4ff;
+        }
+
+        nav .logo {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        /* ===== SEÇÃO SOBRE ===== */
+        section {
+            padding: 60px 20px;
+        }
+
+        #sobre {
+            background-color: #fff;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        #sobre h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #0046ff;
+        }
+
+        #sobre p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* ===== BOTÕES ===== */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #0046ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0033cc;
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media(max-width:768px) {
+            header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <div class="logo"></div>
+            <h1>Sistema de Controle de Materiais</h1>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="equipamento.php">Equipamento</a>
+                <a href="painel_estoque.php">Estoque</a>
+                <a href="associados.html">Associados</a>
+                <a href="reservas.php">Reservas</a>
+                <a href="feedback.php">Feedback</a>
+                <a href="login.php">Login</a>
+                <a href="criar-conta.php">Criar Conta</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Sobre -->
+    <section id="sobre">
+        <h2>Sobre o Sistema</h2>
+        <p>
+            Este sistema foi desenvolvido para gerenciar e controlar o uso de materiais de informática, como computadores, projetores, periféricos e outros equipamentos.
+            Ele permite a consulta de equipamentos disponíveis, gerenciamento de empréstimos, reservas, manutenção e histórico de uso.
+        </p>
+        <a href="reservas.php" class="btn">Ver Reservas</a>
+    </section>
+
+    <!-- Rodapé -->
+    <footer style="text-align:center; padding:20px; background:#0046ff; color:#fff;">
+        &copy; <?= date('Y') ?> Sistema de Controle de Materiais. Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
